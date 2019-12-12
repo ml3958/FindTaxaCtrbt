@@ -97,7 +97,8 @@ read.csv(table_dir) %>%
                 Strain = Species) %>%
   tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>%
   dplyr::select(UniprotID,Description,Phylum, Family, Genus, Species, Strain) %>%
-  kable() 
+  knitr::kable(format = "markdown",full_width = T) %>%
+  kable_styling(font_size =11) 
 ```
 
 
