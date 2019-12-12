@@ -2,7 +2,9 @@
 title: "FindTaxaCtrbt"
 author: Menghan Liu
 date: December 12, 2019
-output: md_document
+output:
+  md_document:
+    variant: markdown_github
 theme: cosmo
 code_folding: hide
 ---
@@ -12,6 +14,12 @@ code_folding: hide
 knitr::opts_knit$set()
 dir='/Users/menghanliu/Documents/FindTaxaCtrbt'
 knitr::opts_knit$set(root.dir = dir)
+knitr::opts_chunk$set(message = FALSE,warning = FALSE)
+```
+
+```{r library packae, echo = FALSE, eval=TRUE}
+library(dplyr)
+library(kableExtra)
 ```
 
 # FindTaxaCtrbt
@@ -51,11 +59,28 @@ The dependencies include manually install dependency
    *  R v3.3.2
    *  R packages: dplyr, tidyr
    
-**Step 2. Download data **
+**Step 2. Download data**
 
 Two part of input data is required 
 
-1. 
+1. a comprehensive list of protein homologs for the function of interest
+   - a .fasta file containging their amino acid sequences  
+   - a .csv table containing their taxonomic origin 
+  
+  
+  i.e I am interested in the oxalate degradation function.
+```{r, echo=FALSE,eval=TRUE}
+table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv'
+read.csv(table_dir) %>%
+  head %>%
+  kable(row.names = F)
+```
+  
+  
+2. Metagenomics and metatranscriptomics sample for the microbial community you're interested in.
+
+
+**Step 3. prepare data**
   
   
   
