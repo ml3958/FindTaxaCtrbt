@@ -1,11 +1,14 @@
 FindTaxaCtrbt
 =============
 
+Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu)
+
 TOC
 ---
 
 1.  [Installation](#installation)
 2.  [Getting started](#get_start)
+3.  [Tutorial](#tutorial)
 
 Installation
 ------------
@@ -47,304 +50,48 @@ Two part of input data is required
 
 1.  a comprehensive list of protein homologs for the function of
     interest
-    -   a .fasta file containging their amino acid sequences  
-    -   a .csv table containing their taxonomic origin
-
-i.e I am interested in the oxalate degradation function.
-<table>
-<thead>
-<tr>
-<th style="text-align:right;">
-X
-</th>
-<th style="text-align:left;">
-enzyme
-</th>
-<th style="text-align:left;">
-Class
-</th>
-<th style="text-align:left;">
-Description
-</th>
-<th style="text-align:left;">
-Family
-</th>
-<th style="text-align:left;">
-Gene.Name
-</th>
-<th style="text-align:left;">
-Genus
-</th>
-<th style="text-align:left;">
-name
-</th>
-<th style="text-align:left;">
-Order
-</th>
-<th style="text-align:left;">
-Organism
-</th>
-<th style="text-align:left;">
-Phylum
-</th>
-<th style="text-align:right;">
-Sequence.Length
-</th>
-<th style="text-align:left;">
-Species
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Alphaproteobacteria
-</td>
-<td style="text-align:left;">
-Oxalyl-CoA decarboxylase
-</td>
-<td style="text-align:left;">
-Acetobacteraceae
-</td>
-<td style="text-align:left;">
-AZ09\_06970
-</td>
-<td style="text-align:left;">
-Acetobacter
-</td>
-<td style="text-align:left;">
-A0A063X7E6
-</td>
-<td style="text-align:left;">
-Rhodospirillales
-</td>
-<td style="text-align:left;">
-Acetobacter aceti 1023.
-</td>
-<td style="text-align:left;">
-Proteobacteria
-</td>
-<td style="text-align:right;">
-578
-</td>
-<td style="text-align:left;">
-Acetobacter aceti 1023
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Alphaproteobacteria
-</td>
-<td style="text-align:left;">
-Oxalyl-CoA decarboxylase
-</td>
-<td style="text-align:left;">
-Acetobacteraceae
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Acetobacter
-</td>
-<td style="text-align:left;">
-A9X6P8
-</td>
-<td style="text-align:left;">
-Rhodospirillales
-</td>
-<td style="text-align:left;">
-Acetobacter aceti.
-</td>
-<td style="text-align:left;">
-Proteobacteria
-</td>
-<td style="text-align:right;">
-578
-</td>
-<td style="text-align:left;">
-Acetobacter aceti
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Alphaproteobacteria
-</td>
-<td style="text-align:left;">
-Oxalyl-CoA decarboxylase
-</td>
-<td style="text-align:left;">
-Acetobacteraceae
-</td>
-<td style="text-align:left;">
-S101447\_02301
-</td>
-<td style="text-align:left;">
-Acetobacter
-</td>
-<td style="text-align:left;">
-A0A1Y0V990
-</td>
-<td style="text-align:left;">
-Rhodospirillales
-</td>
-<td style="text-align:left;">
-Acetobacter ascendens.
-</td>
-<td style="text-align:left;">
-Proteobacteria
-</td>
-<td style="text-align:right;">
-578
-</td>
-<td style="text-align:left;">
-Acetobacter ascendens
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Alphaproteobacteria
-</td>
-<td style="text-align:left;">
-Oxalyl-CoA decarboxylase
-</td>
-<td style="text-align:left;">
-Acetobacteraceae
-</td>
-<td style="text-align:left;">
-AD951\_02190
-</td>
-<td style="text-align:left;">
-Acetobacter
-</td>
-<td style="text-align:left;">
-A0A149USA4
-</td>
-<td style="text-align:left;">
-Rhodospirillales
-</td>
-<td style="text-align:left;">
-Acetobacter malorum.
-</td>
-<td style="text-align:left;">
-Proteobacteria
-</td>
-<td style="text-align:right;">
-578
-</td>
-<td style="text-align:left;">
-Acetobacter malorum
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Alphaproteobacteria
-</td>
-<td style="text-align:left;">
-Oxalyl-CoA decarboxylase
-</td>
-<td style="text-align:left;">
-Acetobacteraceae
-</td>
-<td style="text-align:left;">
-SRCM100623\_02026
-</td>
-<td style="text-align:left;">
-Acetobacter
-</td>
-<td style="text-align:left;">
-A0A1A0DAZ7
-</td>
-<td style="text-align:left;">
-Rhodospirillales
-</td>
-<td style="text-align:left;">
-Acetobacter pasteurianus
-</td>
-<td style="text-align:left;">
-Proteobacteria
-</td>
-<td style="text-align:right;">
-578
-</td>
-<td style="text-align:left;">
-Acetobacter pasteurianus
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:left;">
-oxc
-</td>
-<td style="text-align:left;">
-Alphaproteobacteria
-</td>
-<td style="text-align:left;">
-Oxalyl-CoA decarboxylase
-</td>
-<td style="text-align:left;">
-Acetobacteraceae
-</td>
-<td style="text-align:left;">
-BJI49\_13215
-</td>
-<td style="text-align:left;">
-Acetobacter
-</td>
-<td style="text-align:left;">
-A0A368A7F9
-</td>
-<td style="text-align:left;">
-Rhodospirillales
-</td>
-<td style="text-align:left;">
-Acetobacter pasteurianus
-</td>
-<td style="text-align:left;">
-Proteobacteria
-</td>
-<td style="text-align:right;">
-579
-</td>
-<td style="text-align:left;">
-Acetobacter pasteurianus
-</td>
-</tr>
-</tbody>
-</table>
-1.  Metagenomics and metatranscriptomics sample for the microbial
+    -   a **.fasta file** containging their amino acid sequences  
+    -   a **.csv table** containing their taxonomic origin
+2.  Metagenomics and metatranscriptomics sample for the microbial
     community you’re interested in.
 
-**Step 3. prepare data**
+Step 3.
+
+Tutorial
+--------
+
+For example, I am interested in the oxalyl-coA decarboxylase (OXC),
+which is involved in the oxalate degradation function.
+
+Therefore, I found a [homologous protein
+family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC
+at Uniprot.
+
+    ##   X enzyme               Class               Description           Family
+    ## 1 1    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
+    ## 2 2    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
+    ## 3 3    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
+    ## 4 4    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
+    ## 5 5    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
+    ## 6 6    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
+    ##          Gene.Name       Genus       name            Order
+    ## 1       AZ09_06970 Acetobacter A0A063X7E6 Rhodospirillales
+    ## 2              oxc Acetobacter     A9X6P8 Rhodospirillales
+    ## 3    S101447_02301 Acetobacter A0A1Y0V990 Rhodospirillales
+    ## 4      AD951_02190 Acetobacter A0A149USA4 Rhodospirillales
+    ## 5 SRCM100623_02026 Acetobacter A0A1A0DAZ7 Rhodospirillales
+    ## 6      BJI49_13215 Acetobacter A0A368A7F9 Rhodospirillales
+    ##                    Organism         Phylum Sequence.Length
+    ## 1   Acetobacter aceti 1023. Proteobacteria             578
+    ## 2        Acetobacter aceti. Proteobacteria             578
+    ## 3    Acetobacter ascendens. Proteobacteria             578
+    ## 4      Acetobacter malorum. Proteobacteria             578
+    ## 5 Acetobacter pasteurianus  Proteobacteria             578
+    ## 6 Acetobacter pasteurianus  Proteobacteria             579
+    ##                    Species
+    ## 1   Acetobacter aceti 1023
+    ## 2        Acetobacter aceti
+    ## 3    Acetobacter ascendens
+    ## 4      Acetobacter malorum
+    ## 5 Acetobacter pasteurianus
+    ## 6 Acetobacter pasteurianus

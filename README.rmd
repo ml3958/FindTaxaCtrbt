@@ -72,20 +72,7 @@ Two part of input data is required
    - a **.csv table** containing their taxonomic origin 
   
   
-  
-```{r, echo=FALSE,eval=TRUE}
-table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv'
 
-read.csv(table_dir) %>%
-  head() %>%
-  dplyr::mutate(UniprotID = name,
-                Strain = Species) %>%
-  tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>%
-  dplyr::select(UniprotID,enzyme,Description,Phylum, Family, Genus, Species,Strain) %>%
-  kable() %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),  full_width = F,position = "left", font_size =11) %>%
-  scroll_box(width = "100%", height = "400px")
-```
   
   
 2. Metagenomics and metatranscriptomics sample for the microbial community you're interested in.
@@ -95,14 +82,20 @@ Step 3.
 
 
 ## Tutorial {#tutorial}
-For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function. 
+For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function.
 
 Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC at Uniprot.
-  
 
-  
-  
-  
+
+
+```{r example table, echo=FALSE,eval=TRUE}
+table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv'
+
+read.csv(table_dir) %>%
+  head() 
+```
+
+
 
 
 
