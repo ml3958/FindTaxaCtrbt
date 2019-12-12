@@ -13,8 +13,9 @@ Environment setup
 ### automatic setp via Conda (recommended)
 
 Install a conda environment with the file
-`FindTaxaCtrbt_environment.yml`
-`conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`
+*FindTaxaCtrbt\_environment.yml*, using following code
+
+    `conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`
 
 ### manually install dependency
 

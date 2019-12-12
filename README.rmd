@@ -28,8 +28,10 @@ knitr::opts_knit$set(root.dir = dir)
 ## Environment setup {#environment_setup}
 
 ### automatic setp via Conda (recommended)
-Install a conda environment with the file `FindTaxaCtrbt_environment.yml`
-`conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`
+Install a conda environment with the file *FindTaxaCtrbt_environment.yml*, using following code
+
+
+    `conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`
 
 
 ### manually install dependency
@@ -40,7 +42,6 @@ Install a conda environment with the file `FindTaxaCtrbt_environment.yml`
   * tidyr
   
   
-  #test 1 {#test1}
   
 
 
