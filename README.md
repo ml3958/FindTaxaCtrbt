@@ -67,31 +67,170 @@ Therefore, I found a [homologous protein
 family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC
 at Uniprot.
 
-    ##   X enzyme               Class               Description           Family
-    ## 1 1    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
-    ## 2 2    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
-    ## 3 3    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
-    ## 4 4    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
-    ## 5 5    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
-    ## 6 6    oxc Alphaproteobacteria Oxalyl-CoA decarboxylase  Acetobacteraceae
-    ##          Gene.Name       Genus       name            Order
-    ## 1       AZ09_06970 Acetobacter A0A063X7E6 Rhodospirillales
-    ## 2              oxc Acetobacter     A9X6P8 Rhodospirillales
-    ## 3    S101447_02301 Acetobacter A0A1Y0V990 Rhodospirillales
-    ## 4      AD951_02190 Acetobacter A0A149USA4 Rhodospirillales
-    ## 5 SRCM100623_02026 Acetobacter A0A1A0DAZ7 Rhodospirillales
-    ## 6      BJI49_13215 Acetobacter A0A368A7F9 Rhodospirillales
-    ##                    Organism         Phylum Sequence.Length
-    ## 1   Acetobacter aceti 1023. Proteobacteria             578
-    ## 2        Acetobacter aceti. Proteobacteria             578
-    ## 3    Acetobacter ascendens. Proteobacteria             578
-    ## 4      Acetobacter malorum. Proteobacteria             578
-    ## 5 Acetobacter pasteurianus  Proteobacteria             578
-    ## 6 Acetobacter pasteurianus  Proteobacteria             579
-    ##                    Species
-    ## 1   Acetobacter aceti 1023
-    ## 2        Acetobacter aceti
-    ## 3    Acetobacter ascendens
-    ## 4      Acetobacter malorum
-    ## 5 Acetobacter pasteurianus
-    ## 6 Acetobacter pasteurianus
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+UniprotID
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Phylum
+</th>
+<th style="text-align:left;">
+Family
+</th>
+<th style="text-align:left;">
+Genus
+</th>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:left;">
+Strain
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+A0A063X7E6
+</td>
+<td style="text-align:left;">
+Oxalyl-CoA decarboxylase
+</td>
+<td style="text-align:left;">
+Proteobacteria
+</td>
+<td style="text-align:left;">
+Acetobacteraceae
+</td>
+<td style="text-align:left;">
+Acetobacter
+</td>
+<td style="text-align:left;">
+aceti
+</td>
+<td style="text-align:left;">
+Acetobacter aceti 1023
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A9X6P8
+</td>
+<td style="text-align:left;">
+Oxalyl-CoA decarboxylase
+</td>
+<td style="text-align:left;">
+Proteobacteria
+</td>
+<td style="text-align:left;">
+Acetobacteraceae
+</td>
+<td style="text-align:left;">
+Acetobacter
+</td>
+<td style="text-align:left;">
+aceti
+</td>
+<td style="text-align:left;">
+Acetobacter aceti
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A0A1Y0V990
+</td>
+<td style="text-align:left;">
+Oxalyl-CoA decarboxylase
+</td>
+<td style="text-align:left;">
+Proteobacteria
+</td>
+<td style="text-align:left;">
+Acetobacteraceae
+</td>
+<td style="text-align:left;">
+Acetobacter
+</td>
+<td style="text-align:left;">
+ascendens
+</td>
+<td style="text-align:left;">
+Acetobacter ascendens
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A0A149USA4
+</td>
+<td style="text-align:left;">
+Oxalyl-CoA decarboxylase
+</td>
+<td style="text-align:left;">
+Proteobacteria
+</td>
+<td style="text-align:left;">
+Acetobacteraceae
+</td>
+<td style="text-align:left;">
+Acetobacter
+</td>
+<td style="text-align:left;">
+malorum
+</td>
+<td style="text-align:left;">
+Acetobacter malorum
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A0A1A0DAZ7
+</td>
+<td style="text-align:left;">
+Oxalyl-CoA decarboxylase
+</td>
+<td style="text-align:left;">
+Proteobacteria
+</td>
+<td style="text-align:left;">
+Acetobacteraceae
+</td>
+<td style="text-align:left;">
+Acetobacter
+</td>
+<td style="text-align:left;">
+pasteurianus
+</td>
+<td style="text-align:left;">
+Acetobacter pasteurianus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A0A368A7F9
+</td>
+<td style="text-align:left;">
+Oxalyl-CoA decarboxylase
+</td>
+<td style="text-align:left;">
+Proteobacteria
+</td>
+<td style="text-align:left;">
+Acetobacteraceae
+</td>
+<td style="text-align:left;">
+Acetobacter
+</td>
+<td style="text-align:left;">
+pasteurianus
+</td>
+<td style="text-align:left;">
+Acetobacter pasteurianus
+</td>
+</tr>
+</tbody>
+</table>

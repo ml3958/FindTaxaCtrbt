@@ -92,7 +92,12 @@ Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/e
 table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv'
 
 read.csv(table_dir) %>%
-  head() 
+  head() %>%
+  dplyr::mutate(UniprotID = name,
+                Strain = Species) %>%
+  tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>%
+  dplyr::select(UniprotID,Description,Phylum, Family, Genus, Species, Strain) %>%
+  kable() 
 ```
 
 
