@@ -13,18 +13,15 @@ Installation
 Environment setup
 -----------------
 
-### automatic setp via Conda (recommended)
+The environment for sucesfully running FindTaxaCtrbt is handled by
+creating a conda environment via the file
+*FindTaxaCtrbt\_environment.yml*, by the following code
 
-Install a conda environment with the file
-*FindTaxaCtrbt\_environment.yml*, using following code
+    conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml
 
-    `conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`
+The dependencies include manually install dependency
 
-### manually install dependency
-
-1.  Diamond vXX
-2.  R v3.3.2
-3.  R packages:
-
--   dplyr
--   tidyr
+-   Diamond vXX
+-   R
+    -   R v3.3.2
+    -   R packages: dplyr, tidyr
