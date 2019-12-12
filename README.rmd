@@ -25,6 +25,8 @@ library(kableExtra)
 # FindTaxaCtrbt
 
 Author: Menghan Liu  @ [twitter](https://twitter.com/menghan_liu) 
+Date: December 12, 2019
+
 
 
 ## TOC 
@@ -32,6 +34,8 @@ Author: Menghan Liu  @ [twitter](https://twitter.com/menghan_liu)
 1. [Installation](#installation)
 2. [Getting started](#get_start)
 3. [Tutorial](#tutorial)
+
+X. [Citation](#citation)
 
 
 ## Installation {#installation}
@@ -96,6 +100,9 @@ read.csv(table_dir) %>%
   knitr::kable(format = "markdown") %>%
   kable_styling(font_size = 7, full_width = F) 
 ```
+
+
+## Citation {#citation}
 
 
 

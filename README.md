@@ -1,7 +1,8 @@
 FindTaxaCtrbt
 =============
 
-Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu)
+Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu) Date:
+December 12, 2019
 
 TOC
 ---
@@ -9,6 +10,8 @@ TOC
 1.  [Installation](#installation)
 2.  [Getting started](#get_start)
 3.  [Tutorial](#tutorial)
+
+X. [Citation](#citation)
 
 Installation
 ------------
@@ -141,3 +144,6 @@ at Uniprot.
 </tr>
 </tbody>
 </table>
+
+Citation
+--------
