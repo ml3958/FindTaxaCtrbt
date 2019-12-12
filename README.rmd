@@ -20,12 +20,14 @@ knitr::opts_knit$set(root.dir = dir)
 ## TOC 
 
 1. [Installation](#installation)
-2. [Environment setup](#environment_setup)
+2. [Getting started](#get_start)
 
 
 ## Installation {#installation}
 
-## Environment setup {#environment_setup}
+## Getting started
+
+**Step 1. Environment setup {#environment_setup}**
 
 The environment for sucesfully running FindTaxaCtrbt is handled by creating a conda environment via the file *FindTaxaCtrbt_environment.yml*, by the following code
 

@@ -5,13 +5,15 @@ TOC
 ---
 
 1.  [Installation](#installation)
-2.  [Environment setup](#environment_setup)
+2.  [Getting started](#get_start)
 
 Installation
 ------------
 
-Environment setup
------------------
+Getting started
+---------------
+
+**Step 1. Environment setup {\#environment\_setup}**
 
 The environment for sucesfully running FindTaxaCtrbt is handled by
 creating a conda environment via the file
