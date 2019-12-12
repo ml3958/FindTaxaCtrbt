@@ -40,28 +40,24 @@ Author: Menghan Liu  @ [twitter](https://twitter.com/menghan_liu)
 
 **Step 1. Environment setup via Conda**
 
-The environment for sucesfully running FindTaxaCtrbt is handled by creating a conda environment via the file <p style="color:darkblue">FindTaxaCtrbt_environment.yml</p>, with the following code
-
+The environment required for FindTaxaCtrbt can be handled via creating a conda environment based on the provided .yml file *FindTaxaCtrbt_environment.yml*, with the following code
 
 ```
+# create the conda environment named `FindTaxaCtrbt`
 conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml
-```
-
-we created a conda environment named FindTaxaCtrbt, and in order to initiate the environment we just simply run 
-
-```
+# initiate the `FindTaxaCtrbt` environment
 conda activate FindTaxaCtrbt
 ```
 
-Of course, you can name the environment however you want, by just substitute the conda env name parameter `conda env create -n <your_customized_environment_name> --file FindTaxaCtrbt_environment.yml `
+Of course, you can name the environment however you want, by just substitute the conda env name parameter `conda env create -n <your_customized_environment_name> --file FindTaxaCtrbt_environment.yml`
 
 
-The dependencies include manually install dependency
-
+If you have the dependencies already, you can skip this step; or install the dependencies manually, 
 - Diamond (v0.9.14 currently included in the *FindTaxaCtrbt_environment.yml*)
 - R 
    *  R v3.3.2
    *  R packages: dplyr, tidyr
+- Parallel (v0.9.14)
    
 **Step 2. Download data**
 
