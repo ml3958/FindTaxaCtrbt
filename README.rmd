@@ -1,0 +1,47 @@
+---
+title: "FindTaxaCtrbt"
+author: Menghan Liu
+date: December 12, 2019
+output: md_document
+# output: html_document
+theme: cosmo
+code_folding: hide
+---
+
+
+```{r setup, echo = FALSE, eval=TRUE}
+knitr::opts_knit$set()
+dir='/Users/menghanliu/Documents/FindTaxaCtrbt'
+knitr::opts_knit$set(root.dir = dir)
+```
+
+
+
+## TOC ##
+
+1. [Installation](#installation)
+2. [Environment setup](#environment_setup)
+
+
+## Installation {#installation}
+
+## Environment setup {#environment_setup}
+
+### automatic setp via Conda (recommended)
+Install a conda environment with the file `FindTaxaCtrbt_environment.yml`
+`conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`
+
+
+### manually install dependency
+1. Diamond vXX
+2. R v3.3.2
+3. R packages:
+  * dplyr
+  * tidyr
+  
+  
+  #test 1 {#test1}
+  
+
+
+
