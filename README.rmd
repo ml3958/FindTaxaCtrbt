@@ -43,12 +43,12 @@ Author: Menghan Liu  @ [twitter](https://twitter.com/menghan_liu)
 The environment required for FindTaxaCtrbt can be handled via creating a conda environment based on the provided .yml file *FindTaxaCtrbt_environment.yml*, with the following code
 
 ```
-conda env create -n <your_desired_environment_name> --file FindTaxaCtrbt_environment.yml # Create a new conda environment
+conda env create -n <your_env_name> --file FindTaxaCtrbt_environment.yml # Create a new conda environment
 
-conda activate <your_desired_environment_name> # initiate the environment
+conda activate <your_env_name> # initiate the environment
 ```
 
-Of course, you can name the environment however you want, by just substitute the conda env name parameter `conda env create -n  --file FindTaxaCtrbt_environment.yml`
+you can name the environment however you want, by specify and substitute in `<your_env_name>`, in the following tutorial, we will call it `FindTaxaCtrbt`
 
 
 If you have the dependencies already, you can skip this step; or install the dependencies manually, 
