@@ -15,9 +15,9 @@ dir='/Users/menghanliu/Documents/FindTaxaCtrbt'
 knitr::opts_knit$set(root.dir = dir)
 ```
 
+# FindTaxaCtrbt
 
-
-## TOC ##
+## TOC 
 
 1. [Installation](#installation)
 2. [Environment setup](#environment_setup)
