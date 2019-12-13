@@ -11,30 +11,36 @@ TOC
 ---
 
 1.  [Installation](#installation)
-2.  [Getting started](#get_start)
-3.  [Tutorial](#tutorial)
+2.  [Preparation](#preparation)
+3.  [Getting started](#get_start)
+4.  [Tutorial](#tutorial)
 
 X. [Citation](#citation)
 
 Installation
 ------------
 
-Getting started
----------------
+Preparation
+-----------
 
-**Step 1. Environment setup via Conda**
+Preparation involve two steps, where step 1 is to set up a conda
+environment with all required dependency; step 2 is to gather data.
+
+**Step 1. Environment setup **
+
+This step needs to be completed for anyone who wants to use this
+pipeline.
 
 The environment required for FindTaxaCtrbt can be handled via creating a
 conda environment based on the ***FindTaxaCtrbt\_environment.yml*** file
 provided, with the following code
 
-    conda env create -n <your_env_name> --file FindTaxaCtrbt_environment.yml # Create a new conda environment
+    conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml # Create a new conda environment called FindTaxaCtrbt
 
-    conda activate <your_env_name> # initiate the environment
+    conda activate FindTaxaCtrbt # initiate the environment
 
-you can name the environment however you want, by specify and substitute
-in `<your_env_name>`, in the following tutorial, we will call it
-`FindTaxaCtrbt`
+I created my environment named as FindTaxaCtrbt , you can name the
+environment however you want.
 
 If you have the dependencies already, you can skip this step; or install
 the dependencies manually,
@@ -48,19 +54,49 @@ the dependencies manually,
 
 **Step 2. Download data**
 
-Two part of input data is required
+Depending upon experimental design and research purpose, this step needs
+to be customized performed.
 
-1.  a comprehensive list of protein homologs for the function of
-    interest
-    -   a **.fasta file** containging their amino acid sequences  
+-   First, **Reference protein**: a list of protein homologs for the
+    microbiome function/enzyme of interest
+    -   a **.fasta file** containging their amino acid sequences
     -   a **.csv table** containing their taxonomic origin
-2.  Metagenomics and metatranscriptomics sample for the microbial
-    community you’re interested in.
+-   Second, **microbiome meta’omics samples** from publicaly avaiable
+    samples, or freshly generated
+    -   metagenome or metatranscriptome samples
 
-Step 3.
+Getting started
+---------------
 
-Tutorial
---------
+### Prepare
+
+    # Initiate conda environment
+    conda activate FindTaxaCtrbt 
+
+    # Switch to your directory
+    cd /Users/menghanliu/Documents/FindTaxaCtrbt
+
+    # Build diamond index for protein reference 
+    diamond makedb \
+       --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
+       --db frc_oxc_oxdd_uniref100.faa  
+       
+    # Check whether the database is sucesfully built 
+    ls frc_oxc_oxdd_uniref100.faa.dmnd
+
+### Run program
+
+    # Make a new folder to store the results 
+    mkdir -p output
+
+    # Run the program
+    bash scripts/FindTaxaCtrbt.sh  \n
+         frc_oxc_oxdd_uniref100.faa \n
+         data/MTG/CSM5FZ42.fastq.gz \n
+         test_result test_result/
+
+Test run with sample data
+-------------------------
 
 For example, I am interested in the oxalyl-coA decarboxylase (OXC),
 which is involved in the oxalate degradation function.
@@ -147,6 +183,33 @@ at Uniprot.
 </tr>
 </tbody>
 </table>
+
+### Prepare
+
+    # Initiate conda environment
+    conda activate FindTaxaCtrbt 
+
+    # Switch to your directory
+    cd /Users/menghanliu/Documents/FindTaxaCtrbt
+
+    # Build diamond index for protein reference 
+    diamond makedb \
+       --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
+       --db frc_oxc_oxdd_uniref100.faa  
+       
+    # Check whether the database is sucesfully built 
+    ls frc_oxc_oxdd_uniref100.faa.dmnd
+
+### Run program
+
+    # Make a new folder to store the results 
+    mkdir -p output
+
+    # Run the program
+    bash scripts/FindTaxaCtrbt.sh  \n
+         frc_oxc_oxdd_uniref100.faa \n
+         data/MTG/CSM5FZ42.fastq.gz \n
+         test_result test_result/
 
 Citation
 --------
