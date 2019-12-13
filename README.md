@@ -13,7 +13,7 @@ TOC
 1.  [Installation](#installation)
 2.  [Getting started](#Getting-started)
 3.  [Tutorial](#tutorial)
-4.  [Test run with sample data](#test-run)
+4.  [Test run with sample data](#Test-run-with-sample-data)
 
 X. [Citation](#citation)
 
