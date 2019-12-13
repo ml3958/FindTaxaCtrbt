@@ -21,8 +21,8 @@ X. [Citation](#citation)
 Installation
 ------------
 
-Started
--------
+Start
+-----
 
 Getting started
 ---------------

@@ -46,7 +46,7 @@ X. [Citation](#citation)
 
 ## Installation {#installation}
 
-## Started {#start}
+## Start {#start}
 
 ## Getting started ## {#getstart}
 
