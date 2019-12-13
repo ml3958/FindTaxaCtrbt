@@ -2,10 +2,10 @@
 title: "FindTaxaCtrbt"
 author: Menghan Liu
 date: December 12, 2019
-output: html_document
-# output:
-#   md_document:
-#     variant: markdown_github
+# output: html_document
+output:
+  md_document:
+    variant: markdown_github
 theme: cosmo
 code_folding: hide
 ---
