@@ -36,6 +36,7 @@ This computational pipeline is designed to launch an exhaustive
 ## TOC 
 
 1. [Installation](#installation)
+2. [Started](#start)
 2. [Getting started](#getstart)
 3. [Tutorial](#tutorial)
 4. [Test run with sample data](#test-run)
@@ -45,6 +46,7 @@ X. [Citation](#citation)
 
 ## Installation {#installation}
 
+## Started {#start}
 ## Getting started ## {#getstart}
 
 
