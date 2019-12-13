@@ -23,8 +23,9 @@ Installation
 Getting started
 ---------------
 
-Preparation involve two steps, where step 1 is to set up a conda
-environment with all required dependency; step 2 is to gather data.
+{\#get\_started} === Preparation involve two steps, where step 1 is to
+set up a conda environment with all required dependency; step 2 is to
+gather data.
 
 **Step 1. Environment setup**
 
