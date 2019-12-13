@@ -370,34 +370,139 @@ summary {
 </div>
 
 
+<div id="findtaxactrbt" class="section level1">
+<h1>FindTaxaCtrbt</h1>
+<p>Author: Menghan Liu @ <a href="https://twitter.com/menghan_liu">twitter</a></p>
+<p>Date: December 12, 2019</p>
+<p>This computational pipeline is designed to launch an exhaustive</p>
 <div id="toc" class="section level2">
 <h2>TOC</h2>
 <ol style="list-style-type: decimal">
 <li><a href="#installation">Installation</a></li>
-<li><a href="#environment_setup">Environment setup</a></li>
+<li><a href="#get-start">Getting started</a></li>
+<li><a href="#tutorial">Tutorial</a></li>
+<li><a href="#test-run">Test run with sample data</a></li>
 </ol>
+<p>X. <a href="#citation">Citation</a></p>
 </div>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
 </div>
-<div id="environment_setup" class="section level2">
-<h2>Environment setup</h2>
-<div id="automatic-setp-via-conda-recommended" class="section level3">
-<h3>automatic setp via Conda (recommended)</h3>
-<p>Install a conda environment with the file <em>FindTaxaCtrbt_environment.yml</em>, using following code</p>
-<pre><code>`conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml`</code></pre>
-</div>
-<div id="manually-install-dependency" class="section level3">
-<h3>manually install dependency</h3>
-<ol style="list-style-type: decimal">
-<li>Diamond vXX</li>
-<li>R v3.3.2</li>
-<li>R packages:</li>
-</ol>
+<div id="get-start" class="section level2">
+<h2>Getting started</h2>
+<p>Preparation involve two steps, where step 1 is to set up a conda environment with all required dependency; step 2 is to gather data.</p>
+<p><strong>Step 1. Environment setup</strong></p>
+<p>This step needs to be completed for anyone who wants to use this pipeline.</p>
+<p>The environment required for FindTaxaCtrbt can be handled via creating a conda environment based on the <strong><em>FindTaxaCtrbt_environment.yml</em></strong> file provided, with the following code</p>
+<pre><code>conda env create -n FindTaxaCtrbt --file FindTaxaCtrbt_environment.yml # Create a new conda environment called FindTaxaCtrbt
+
+conda activate FindTaxaCtrbt # initiate the environment</code></pre>
+<p>I created my environment named as FindTaxaCtrbt , you can name the environment however you want.</p>
+<p>If you have the dependencies already, you can skip this step; or install the dependencies manually,</p>
 <ul>
-<li>dplyr</li>
-<li>tidyr</li>
+<li>Diamond (v0.9.14 currently included in the <em>FindTaxaCtrbt_environment.yml</em>)</li>
+<li>R
+<ul>
+<li>R v3.3.2</li>
+<li>R packages: dplyr, tidyr</li>
+</ul></li>
+<li>Parallel (v0.9.14)</li>
 </ul>
+<p><strong>Step 2. Download data</strong></p>
+<p>Depending upon experimental design and research purpose, this step needs to be customized performed.</p>
+<ul>
+<li>First, <strong>Reference protein</strong>: a list of protein homologs for the microbiome function/enzyme of interest
+<ul>
+<li>a <strong>.fasta file</strong> containging their amino acid sequences</li>
+<li>a <strong>.csv table</strong> containing their taxonomic origin</li>
+</ul></li>
+<li>Second, <strong>microbiome meta’omics samples</strong> from publicaly avaiable samples, or freshly generated
+<ul>
+<li>metagenome or metatranscriptome samples</li>
+</ul></li>
+</ul>
+</div>
+<div id="tutorial" class="section level2">
+<h2>Tutorial</h2>
+<div id="prepare" class="section level3">
+<h3>Prepare</h3>
+<pre><code># Initiate conda environment
+conda activate FindTaxaCtrbt 
+
+# Switch to your directory
+cd /Users/menghanliu/Documents/FindTaxaCtrbt
+
+# Build diamond index for protein reference 
+diamond makedb \
+   --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
+   --db frc_oxc_oxdd_uniref100.faa  
+   
+# Check whether the database is sucesfully built 
+ls frc_oxc_oxdd_uniref100.faa.dmnd</code></pre>
+</div>
+<div id="run-program" class="section level3">
+<h3>Run program</h3>
+<pre><code># Make a new folder to store the results 
+mkdir -p output
+
+# Run the program
+bash scripts/FindTaxaCtrbt.sh  \n
+     frc_oxc_oxdd_uniref100.faa \n
+     data/MTG/CSM5FZ42.fastq.gz \n
+     test_result test_result/</code></pre>
+</div>
+</div>
+<div id="test_run" class="section level2">
+<h2>Test run with sample data</h2>
+<p>Download sample data via this <a href="https://drive.google.com/drive/u/1/folders/1zh-nD4X3bhZAx9XbdMjOeJCp-jZc4XL6">link</a></p>
+<p>Within the downloaded folder, there is a <strong>frc_oxc_oxdd_uniref100.faa</strong> that contains the amino acid sequences of 6067 protein homologs of oxalate degrading enzymes OXDD, FRC and OXC.</p>
+<p>Also, there are two folders <strong>MTG/</strong> and <strong>MTS/</strong> that contains 3 metagenomic and 3 metatranscriptomic fastq.gz samples, respectively. <!-- For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function. --> <!-- Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC at Uniprot. --></p>
+<!-- ```{r example table, echo=FALSE,eval=TRUE} -->
+<!-- table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv' -->
+<!-- read.csv(table_dir) %>% -->
+<!--   head() %>% -->
+<!--   dplyr::mutate(UniprotID = name, -->
+<!--                 Strain = Species) %>% -->
+<!--   tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>% -->
+<!--   dplyr::select(UniprotID,Description,Phylum, Family, Genus, Species, Strain) %>% -->
+<!--   knitr::kable(format = "markdown") %>% -->
+<!--   kable_styling(font_size = 7, full_width = F)  -->
+<!-- ``` -->
+<p>Now, let’s start a test run on those sample data</p>
+<pre><code># Initiate conda environment
+conda activate FindTaxaCtrbt 
+
+# Switch to your directory
+cd /Users/menghanliu/Documents/FindTaxaCtrbt_sample_data
+
+# Build diamond index for protein reference 
+diamond makedb \
+   --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
+   --db frc_oxc_oxdd_uniref100.faa  
+   
+# Check whether the database is sucesfully built 
+ls frc_oxc_oxdd_uniref100.faa.dmnd
+
+
+# Make a new folder to store the results 
+mkdir -p output
+</code></pre>
+<p>Next we can run the program on either one sample,</p>
+<pre><code># Run the program on one sample MTG/CSM5FZ42.fastq.gz
+bash &lt;path_to_your_FindTaxaCtrbt_folder&gt;/scripts/FindTaxaCtrbt.sh  \
+     frc_oxc_oxdd_uniref100.faa \
+     MTG/CSM5FZ42.fastq.gz \
+     test_result test_result/</code></pre>
+<p>Or parallel on all samples within one folder</p>
+<pre><code>parallel parallel \
+     bash &lt;path_to_your_FindTaxaCtrbt_folder&gt;/scripts/FindTaxaCtrbt.sh  \
+         frc_oxc_oxdd_uniref100.faa \
+         {.} \
+         test_result test_result \
+    ::: ls MTG/*</code></pre>
+</div>
+<div id="citation" class="section level2">
+<h2>Citation</h2>
 </div>
 </div>
 

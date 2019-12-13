@@ -2,9 +2,10 @@
 title: "FindTaxaCtrbt"
 author: Menghan Liu
 date: December 12, 2019
-output:
-  md_document:
-    variant: markdown_github
+output: html_document
+# output:
+#   md_document:
+#     variant: markdown_github
 theme: cosmo
 code_folding: hide
 ---
@@ -35,16 +36,16 @@ This computational pipeline is designed to launch an exhaustive
 ## TOC 
 
 1. [Installation](#installation)
-2. [Getting started](#get_start)
+2. [Getting started](#get-start)
 3. [Tutorial](#tutorial)
-4. [Test run with sample data](#test_run)
+4. [Test run with sample data](#test-run)
 
 X. [Citation](#citation)
 
 
 ## Installation {#installation}
 
-## Getting started ## {#get_start}
+## Getting started {#get-start}
 
 Preparation involve two steps, where step 1 is to set up a conda environment with all required dependency; step 2 is to gather data.
 
