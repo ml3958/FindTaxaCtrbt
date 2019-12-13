@@ -1,8 +1,11 @@
 FindTaxaCtrbt
 =============
 
-Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu) Date:
-December 12, 2019
+Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu)
+
+Date: December 12, 2019
+
+This computational pipeline is designed to launch an exhaustive
 
 TOC
 ---
@@ -22,8 +25,8 @@ Getting started
 **Step 1. Environment setup via Conda**
 
 The environment required for FindTaxaCtrbt can be handled via creating a
-conda environment based on the provided .yml file
-*FindTaxaCtrbt\_environment.yml*, with the following code
+conda environment based on the ***FindTaxaCtrbt\_environment.yml*** file
+provided, with the following code
 
     conda env create -n <your_env_name> --file FindTaxaCtrbt_environment.yml # Create a new conda environment
 
