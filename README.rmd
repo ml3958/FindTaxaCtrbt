@@ -36,7 +36,7 @@ This computational pipeline is designed to launch an exhaustive
 ## TOC 
 
 1. [Installation](#installation)
-2. [Gettingstarted](#getstart)
+2. [Getting started](#getstart)
 3. [Tutorial](#tutorial)
 4. [Test run with sample data](#test-run)
 
@@ -45,9 +45,9 @@ X. [Citation](#citation)
 
 ## Installation {#installation}
 
-## Gettingstarted {#getstart}
+## Getting started ##
 
-### things
+
 Preparation involve two steps, where step 1 is to set up a conda environment with all required dependency; step 2 is to gather data.
 
 
@@ -88,6 +88,7 @@ Depending upon experimental design and research purpose, this step needs to be c
 * Second, **microbiome meta'omics samples** from publicaly avaiable samples, or freshly generated
    - metagenome or metatranscriptome samples
    
+
 
 ## Tutorial
 
