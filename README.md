@@ -11,7 +11,7 @@ TOC
 ---
 
 1.  [Installation](#installation)
-2.  [Getting started](#getstart)
+2.  [Getting started](#Getting-started)
 3.  [Tutorial](#tutorial)
 4.  [Test run with sample data](#test-run)
 
@@ -20,8 +20,8 @@ X. [Citation](#citation)
 Installation
 ------------
 
-Getstart
---------
+Getting-started
+---------------
 
 Preparation involve two steps, where step 1 is to set up a conda
 environment with all required dependency; step 2 is to gather data.
