@@ -102,11 +102,10 @@ Download sample data via this
 [link](https://drive.google.com/drive/u/1/folders/1zh-nD4X3bhZAx9XbdMjOeJCp-jZc4XL6)
 
 Within the downloaded folder, there is a
-***frc\_oxc\_oxdd\_uniref100.faa*** that contains the amino acid
-sequences of 6067 protein homologs of oxalate degrading enzymes OXDD,
-FRC and OXC.
+**frc\_oxc\_oxdd\_uniref100.faa** that contains the amino acid sequences
+of 6067 protein homologs of oxalate degrading enzymes OXDD, FRC and OXC.
 
-Also, there are two folders ***MTG*** and ***MTS*** that contains 3
+Also, there are two folders **MTG/** and **MTS/** that contains 3
 metagenomic and 3 metatranscriptomic fastq.gz samples, respectively.
 <!-- For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function. -->
 <!-- Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC at Uniprot. -->
