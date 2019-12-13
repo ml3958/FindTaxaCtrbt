@@ -14,8 +14,7 @@ TOC
 2.  [Getting started](#Getting-started)
 3.  [Tutorial](#tutorial)
 4.  [Test run with sample data](#Test-run-with-sample-data)
-
-X. [Citation](#citation)
+5.  [Citation](#citation)
 
 Installation
 ------------
@@ -39,18 +38,15 @@ provided, with the following code
 
     conda activate FindTaxaCtrbt # initiate the environment
 
-I created my environment named as FindTaxaCtrbt , you can name the
-environment however you want.
+*you can customize your environment name by replacing FindTaxaCtrbt with
+<name_of_your_choice>*
 
-If you have the dependencies already, you can skip this step; or install
-the dependencies manually,
-
--   Diamond (v0.9.14 currently included in the
-    *FindTaxaCtrbt\_environment.yml*)
--   R
-    -   R v3.3.2
-    -   R packages: dplyr, tidyr
--   Parallel (v0.9.14)
+If you have the dependencies (Diamond,
+[Parallel](https://www.gnu.org/software/parallel/parallel_tutorial.html)
+*v0.9.14*, R *v3.3.2*, r packages
+[dplyr](https://cran.r-project.org/web/packages/dplyr/index.html) and
+[tidyr](https://cran.r-project.org/web/packages/tidyr/index.html)), you
+can skip this step; or install the dependencies manually,
 
 **Step 2. Download data**
 
@@ -90,9 +86,9 @@ Tutorial
     mkdir -p output
 
     # Run the program
-    bash scripts/FindTaxaCtrbt.sh  \n
-         frc_oxc_oxdd_uniref100.faa \n
-         data/MTG/CSM5FZ42.fastq.gz \n
+    bash scripts/FindTaxaCtrbt.sh  \
+         frc_oxc_oxdd_uniref100.faa \
+         data/MTG/CSM5FZ42.fastq.gz \
          test_result test_result/
 
 Test run with sample data
@@ -160,3 +156,5 @@ Or parallel on all samples within one folder
 
 Citation
 --------
+
+Pending
