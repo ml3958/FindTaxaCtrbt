@@ -11,22 +11,22 @@ TOC
 ---
 
 1.  [Installation](#installation)
-2.  [Preparation](#preparation)
-3.  [Getting started](#get_start)
-4.  [Tutorial](#tutorial)
+2.  [Getting started](#get_start)
+3.  [Tutorial](#tutorial)
+4.  [Test run with sample data](#test_run)
 
 X. [Citation](#citation)
 
 Installation
 ------------
 
-Preparation
------------
+Getting started
+---------------
 
 Preparation involve two steps, where step 1 is to set up a conda
 environment with all required dependency; step 2 is to gather data.
 
-**Step 1. Environment setup **
+**Step 1. Environment setup**
 
 This step needs to be completed for anyone who wants to use this
 pipeline.
@@ -65,8 +65,8 @@ to be customized performed.
     samples, or freshly generated
     -   metagenome or metatranscriptome samples
 
-Getting started
----------------
+Tutorial
+--------
 
 ### Prepare
 
@@ -98,99 +98,37 @@ Getting started
 Test run with sample data
 -------------------------
 
-For example, I am interested in the oxalyl-coA decarboxylase (OXC),
-which is involved in the oxalate degradation function.
+Download sample data via this
+[link](https://drive.google.com/drive/u/1/folders/1zh-nD4X3bhZAx9XbdMjOeJCp-jZc4XL6)
 
-Therefore, I found a [homologous protein
-family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC
-at Uniprot.
+Within the downloaded folder, there is a
+***frc\_oxc\_oxdd\_uniref100.faa*** that contains the amino acid
+sequences of 6067 protein homologs of oxalate degrading enzymes OXDD,
+FRC and OXC.
 
-<table>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 21%" />
-<col style="width: 12%" />
-<col style="width: 14%" />
-<col style="width: 10%" />
-<col style="width: 11%" />
-<col style="width: 21%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">UniprotID</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Phylum</th>
-<th style="text-align: left;">Family</th>
-<th style="text-align: left;">Genus</th>
-<th style="text-align: left;">Species</th>
-<th style="text-align: left;">Strain</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">A0A063X7E6</td>
-<td style="text-align: left;">Oxalyl-CoA decarboxylase</td>
-<td style="text-align: left;">Proteobacteria</td>
-<td style="text-align: left;">Acetobacteraceae</td>
-<td style="text-align: left;">Acetobacter</td>
-<td style="text-align: left;">aceti</td>
-<td style="text-align: left;">Acetobacter aceti 1023</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A9X6P8</td>
-<td style="text-align: left;">Oxalyl-CoA decarboxylase</td>
-<td style="text-align: left;">Proteobacteria</td>
-<td style="text-align: left;">Acetobacteraceae</td>
-<td style="text-align: left;">Acetobacter</td>
-<td style="text-align: left;">aceti</td>
-<td style="text-align: left;">Acetobacter aceti</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A0A1Y0V990</td>
-<td style="text-align: left;">Oxalyl-CoA decarboxylase</td>
-<td style="text-align: left;">Proteobacteria</td>
-<td style="text-align: left;">Acetobacteraceae</td>
-<td style="text-align: left;">Acetobacter</td>
-<td style="text-align: left;">ascendens</td>
-<td style="text-align: left;">Acetobacter ascendens</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A0A149USA4</td>
-<td style="text-align: left;">Oxalyl-CoA decarboxylase</td>
-<td style="text-align: left;">Proteobacteria</td>
-<td style="text-align: left;">Acetobacteraceae</td>
-<td style="text-align: left;">Acetobacter</td>
-<td style="text-align: left;">malorum</td>
-<td style="text-align: left;">Acetobacter malorum</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A0A1A0DAZ7</td>
-<td style="text-align: left;">Oxalyl-CoA decarboxylase</td>
-<td style="text-align: left;">Proteobacteria</td>
-<td style="text-align: left;">Acetobacteraceae</td>
-<td style="text-align: left;">Acetobacter</td>
-<td style="text-align: left;">pasteurianus</td>
-<td style="text-align: left;">Acetobacter pasteurianus</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">A0A368A7F9</td>
-<td style="text-align: left;">Oxalyl-CoA decarboxylase</td>
-<td style="text-align: left;">Proteobacteria</td>
-<td style="text-align: left;">Acetobacteraceae</td>
-<td style="text-align: left;">Acetobacter</td>
-<td style="text-align: left;">pasteurianus</td>
-<td style="text-align: left;">Acetobacter pasteurianus</td>
-</tr>
-</tbody>
-</table>
+Also, there are two folders ***MTG*** and ***MTS*** that contains 3
+metagenomic and 3 metatranscriptomic fastq.gz samples, respectively.
+<!-- For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function. -->
+<!-- Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC at Uniprot. -->
 
-### Prepare
+<!-- ```{r example table, echo=FALSE,eval=TRUE} -->
+<!-- table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv' -->
+<!-- read.csv(table_dir) %>% -->
+<!--   head() %>% -->
+<!--   dplyr::mutate(UniprotID = name, -->
+<!--                 Strain = Species) %>% -->
+<!--   tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>% -->
+<!--   dplyr::select(UniprotID,Description,Phylum, Family, Genus, Species, Strain) %>% -->
+<!--   knitr::kable(format = "markdown") %>% -->
+<!--   kable_styling(font_size = 7, full_width = F)  -->
+<!-- ``` -->
+Now, let’s start a test run on those sample data
 
     # Initiate conda environment
     conda activate FindTaxaCtrbt 
 
     # Switch to your directory
-    cd /Users/menghanliu/Documents/FindTaxaCtrbt
+    cd /Users/menghanliu/Documents/FindTaxaCtrbt_sample_data
 
     # Build diamond index for protein reference 
     diamond makedb \
@@ -200,16 +138,26 @@ at Uniprot.
     # Check whether the database is sucesfully built 
     ls frc_oxc_oxdd_uniref100.faa.dmnd
 
-### Run program
 
     # Make a new folder to store the results 
     mkdir -p output
 
-    # Run the program
-    bash scripts/FindTaxaCtrbt.sh  \n
-         frc_oxc_oxdd_uniref100.faa \n
-         data/MTG/CSM5FZ42.fastq.gz \n
+Next we can run the program on either one sample,
+
+    # Run the program on one sample MTG/CSM5FZ42.fastq.gz
+    bash <path_to_your_FindTaxaCtrbt_folder>/scripts/FindTaxaCtrbt.sh  \
+         frc_oxc_oxdd_uniref100.faa \
+         MTG/CSM5FZ42.fastq.gz \
          test_result test_result/
+
+Or parallel on all samples within one folder
+
+    parallel parallel \
+         bash <path_to_your_FindTaxaCtrbt_folder>/scripts/FindTaxaCtrbt.sh  \
+             frc_oxc_oxdd_uniref100.faa \
+             {.} \
+             test_result test_result \
+        ::: ls MTG/*
 
 Citation
 --------
