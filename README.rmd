@@ -44,7 +44,7 @@ X. [Citation](#citation)
 
 ## Installation {#installation}
 
-## Getting started {#get_start}
+## Getting started ## {#get_start}
 
 Preparation involve two steps, where step 1 is to set up a conda environment with all required dependency; step 2 is to gather data.
 
@@ -124,7 +124,7 @@ bash scripts/FindTaxaCtrbt.sh  \n
 
 
 
-## Test run with sample data {#test_run}
+## Test run with sample data ## {#test_run}
 
 Download sample data via this [link](https://drive.google.com/drive/u/1/folders/1zh-nD4X3bhZAx9XbdMjOeJCp-jZc4XL6)
 
