@@ -23,8 +23,6 @@ Installation
 Getting started
 ---------------
 
-{\#getstart}
-
 Preparation involve two steps, where step 1 is to set up a conda
 environment with all required dependency; step 2 is to gather data.
 
