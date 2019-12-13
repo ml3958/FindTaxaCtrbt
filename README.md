@@ -41,12 +41,11 @@ provided, with the following code
 *you can customize your environment name by replacing FindTaxaCtrbt with
 <name_of_your_choice>*
 
-If you have the dependencies (Diamond,
+You can also manually install the core dependencies (Diamond,
 [Parallel](https://www.gnu.org/software/parallel/parallel_tutorial.html)
 *v0.9.14*, R *v3.3.2*, r packages
 [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html) and
-[tidyr](https://cran.r-project.org/web/packages/tidyr/index.html)), you
-can skip this step; or install the dependencies manually,
+[tidyr](https://cran.r-project.org/web/packages/tidyr/index.html))
 
 **Step 2. Download data**
 
@@ -128,7 +127,7 @@ Now, let’s start a test run on those sample data
     # Build diamond index for protein reference 
     diamond makedb \
        --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
-       --db frc_oxc_oxdd_uniref100.faa  
+       --db frc_oxc_oxdd_uniref100.faa  # prefix for databae, output: frc_oxc_oxdd_uniref100.faa.dmnd
        
     # Check whether the database is sucesfully built 
     ls frc_oxc_oxdd_uniref100.faa.dmnd
@@ -147,7 +146,7 @@ Next we can run the program on either one sample,
 
 Or parallel on all samples within one folder
 
-    parallel parallel \
+    parallel \
          bash <path_to_your_FindTaxaCtrbt_folder>/scripts/FindTaxaCtrbt.sh  \
              frc_oxc_oxdd_uniref100.faa \
              {.} \
