@@ -11,14 +11,18 @@ TOC
 ---
 
 1.  [Installation](#installation)
-2.  [Getting started](#getstart)
-3.  [Tutorial](#tutorial)
-4.  [Test run with sample data](#test-run)
+2.  [Started](#start)
+3.  [Getting started](#getstart)
+4.  [Tutorial](#tutorial)
+5.  [Test run with sample data](#test-run)
 
 X. [Citation](#citation)
 
 Installation
 ------------
+
+Started
+-------
 
 Getting started
 ---------------
