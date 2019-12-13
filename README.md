@@ -20,7 +20,7 @@ X. [Citation](#citation)
 Installation
 ------------
 
-Getting-started
+Getting started
 ---------------
 
 Preparation involve two steps, where step 1 is to set up a conda
