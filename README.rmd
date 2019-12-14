@@ -116,7 +116,7 @@ Inputs
 2. <path_to_MTG/MTS_sample> currently accept .fastq.gz file
 3. <directory_to_write_output> 
 
-**inputs are provided as positional manner, thus must follow the order**
+*inputs are provided as positional manner, thus must follow the order*
 
 Output:
 
