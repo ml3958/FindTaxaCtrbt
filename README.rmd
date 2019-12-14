@@ -84,14 +84,14 @@ Depending upon experimental design and research purpose, this step needs to be c
 
 ## Tutorial
 
-Initiate conda environment
+**Initiate conda environment**
 
 ```
 conda activate FindTaxaCtrbt 
 ```
 
 
-Build diamond index for protein reference (only need to perform once)
+**Build diamond index for protein reference (only need to perform once)**
 
 ```
 diamond makedb \
@@ -100,7 +100,7 @@ diamond makedb \
 ```   
 
 
-### Run program
+**Run program**
 
 You can run the program on one sample 
 ```

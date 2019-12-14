@@ -63,17 +63,18 @@ to be customized performed.
 Tutorial
 --------
 
-Initiate conda environment
+**Initiate conda environment**
 
     conda activate FindTaxaCtrbt 
 
-Build diamond index for protein reference (only need to perform once)
+**Build diamond index for protein reference (only need to perform
+once)**
 
     diamond makedb \
        --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
        --db frc_oxc_oxdd_uniref100.faa  
 
-### Run program
+**Run program**
 
 You can run the program on one sample
 
