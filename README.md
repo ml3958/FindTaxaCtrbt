@@ -63,32 +63,35 @@ to be customized performed.
 Tutorial
 --------
 
-### Prepare
+Initiate conda environment
 
-    # Initiate conda environment
     conda activate FindTaxaCtrbt 
 
-    # Switch to your directory
-    cd /Users/menghanliu/Documents/FindTaxaCtrbt
+Build diamond index for protein reference (only need to perform once)
 
-    # Build diamond index for protein reference 
     diamond makedb \
        --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
        --db frc_oxc_oxdd_uniref100.faa  
-       
-    # Check whether the database is sucesfully built 
-    ls frc_oxc_oxdd_uniref100.faa.dmnd
 
 ### Run program
 
-    # Make a new folder to store the results 
-    mkdir -p output
+You can run the program on one sample
 
     # Run the program
     bash scripts/FindTaxaCtrbt.sh  \
-         frc_oxc_oxdd_uniref100.faa \
-         data/MTG/CSM5FZ42.fastq.gz \
-         test_result test_result/
+         <path_to_database> \
+         <path_to_MTG/MTS sample> \
+         <directory_to_write_output>
+
+or, you can run the program on all samples in one directory using
+paralllel
+
+    parallel \
+         bash scripts/FindTaxaCtrbt.sh  \
+             <path_to_database> \
+             {.} \
+             <directory_to_write_output>
+        ::: ls <directory_of_input_sample>/*
 
 Test run with sample data
 -------------------------
