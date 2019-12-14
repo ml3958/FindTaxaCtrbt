@@ -67,8 +67,10 @@ Tutorial
 
     conda activate FindTaxaCtrbt 
 
-**Build diamond index for protein reference (only need to perform
-once)**
+**Build diamond index for protein reference **
+
+For each protein fasta file, you only need to build index for once upon
+first usage.
 
     diamond makedb \
        --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
@@ -79,19 +81,13 @@ once)**
 You can run the program on one sample
 
     # Run the program
-    bash scripts/FindTaxaCtrbt.sh  \
-         <path_to_database> \
-         <path_to_MTG/MTS sample> \
-         <directory_to_write_output>
+    bash scripts/FindTaxaCtrbt.sh  <path_to_diamond_index> <path_to_MTG/MTS_sample> <directory_to_write_output>
 
-or, you can run the program on all samples in one directory using
-paralllel
+or, run the program on all samples in one directory
+`<directory_of_input_sample>` using paralllel
 
     parallel \
-         bash scripts/FindTaxaCtrbt.sh  \
-             <path_to_database> \
-             {.} \
-             <directory_to_write_output>
+         bash scripts/FindTaxaCtrbt.sh  <path_to_database> {.} <directory_to_write_output> \
         ::: ls <directory_of_input_sample>/*
 
 Test run with sample data
