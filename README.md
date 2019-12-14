@@ -78,20 +78,21 @@ first usage.
        --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
        --db frc_oxc_oxdd_uniref100.faa  
 
-**3. \[CORE\] Run diamond **
+**3. \[CORE\] Run diamond**
 
 You can run the program on one sample
 
     # Run the program
     bash scripts/FindTaxaCtrbt.sh  <path_to_diamond_index> <path_to_MTG/MTS_sample> <directory_to_write_output>
 
-Inputs: *provided as positional manner, thus must follow the order*
+Inputs:
 
 1.  <path_to_diamond_index>
 2.  <path_to_MTG/MTS_sample> currently accept .fastq.gz file
-3.  <directory_to_write_output>
+3.  <directory_to_write_output> *provided as positional manner, thus
+    must follow the order*
 
-Output:
+Outputs:
 
 1.  diamond output **xx.m8**
 2.  diamong log file **xx.log**
@@ -105,15 +106,19 @@ or, run the program on all samples in one directory
 
 **4. \[CORE\] Parse diamond output**
 
-    Rscript --vanilla \
-        ../scripts/parse_blastx.r \
-        $outputDir/${input_prefix}.m8 \
-        $outputDir/${input_prefix}_protein_summary.txt \
-        90
+    Rscript --vanilla ../scripts/parse_blastx.r <path_to_diamond_m8_output> <output_file> <identity_cutoff>
+
+or parallel
+
+    parallel \
+       Rscript --vanilla ../scripts/parse_blastx.r {.} {.}_protein_summary.txt <identity_cutoff> \
+       ::: \
+          `ls <.m8_file_directory>|grep m8$`
 
 **5. Merge batch output into one sample**
 
-### Determine the mapping identity cutoff
+Determine the mapping identity cutoff
+-------------------------------------
 
 Test run with sample data
 -------------------------
