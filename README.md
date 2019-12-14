@@ -13,8 +13,10 @@ TOC
 1.  [Installation](#installation)
 2.  [Getting started](#Getting-started)
 3.  [Tutorial](#tutorial)
-4.  [Test run with sample data](#Test-run-with-sample-data)
-5.  [Citation](#citation)
+4.  [Determine mapping identity
+    cutoff](#determine-the-mapping-identity-cutoff)
+5.  [Test run with sample data](#Test-run-with-sample-data)
+6.  [Citation](#citation)
 
 Installation
 ------------
@@ -63,11 +65,11 @@ to be customized performed.
 Tutorial
 --------
 
-**Initiate conda environment**
+**1. Initiate conda environment**
 
     conda activate FindTaxaCtrbt 
 
-**Build diamond index for protein reference**
+**2. Build diamond index for protein reference**
 
 For each protein fasta file, you only need to build index for once upon
 first usage.
@@ -76,12 +78,20 @@ first usage.
        --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
        --db frc_oxc_oxdd_uniref100.faa  
 
-**Run program**
+**3. \[CORE\] Run diamond **
 
 You can run the program on one sample
 
     # Run the program
     bash scripts/FindTaxaCtrbt.sh  <path_to_diamond_index> <path_to_MTG/MTS_sample> <directory_to_write_output>
+
+Inputs are provided as positional manner, thus must follow the order
+
+    1. <path_to_diamond_index>
+    2. <path_to_MTG/MTS_sample> currently accept .fastq.gz file
+    3. <directory_to_write_output> 
+
+Output: 1. diamond output *xx.m8* 2. diamong log file *xx.log*
 
 or, run the program on all samples in one directory
 `<directory_of_input_sample>` using paralllel
@@ -89,6 +99,18 @@ or, run the program on all samples in one directory
     parallel \ 
          bash scripts/FindTaxaCtrbt.sh  <path_to_database> {.} <directory_to_write_output> \ # command to loop for via parallel 
          ::: `ls <directory_of_input_sample>/*` # provide value for {.}
+
+**4. \[CORE\] Parse diamond output**
+
+    Rscript --vanilla \
+        ../scripts/parse_blastx.r \
+        $outputDir/${input_prefix}.m8 \
+        $outputDir/${input_prefix}_protein_summary.txt \
+        90
+
+**5. Merge batch output into one sample**
+
+### Determine the mapping identity cutoff
 
 Test run with sample data
 -------------------------
