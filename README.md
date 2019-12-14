@@ -86,9 +86,9 @@ You can run the program on one sample
 or, run the program on all samples in one directory
 `<directory_of_input_sample>` using paralllel
 
-    parallel \
-         bash scripts/FindTaxaCtrbt.sh  <path_to_database> {.} <directory_to_write_output> \
-        ::: ls <directory_of_input_sample>/*
+    parallel \ 
+         bash scripts/FindTaxaCtrbt.sh  <path_to_database> {.} <directory_to_write_output> \ # command to loop for via parallel 
+         ::: `ls <directory_of_input_sample>/*` # provide value for {.}
 
 Test run with sample data
 -------------------------
