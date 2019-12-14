@@ -85,13 +85,11 @@ You can run the program on one sample
     # Run the program
     bash scripts/FindTaxaCtrbt.sh  <path_to_diamond_index> <path_to_MTG/MTS_sample> <directory_to_write_output>
 
-Inputs
+Inputs: *provided as positional manner, thus must follow the order*
 
 1.  <path_to_diamond_index>
 2.  <path_to_MTG/MTS_sample> currently accept .fastq.gz file
 3.  <directory_to_write_output>
-
-**inputs are provided as positional manner, thus must follow the order**
 
 Output:
 
