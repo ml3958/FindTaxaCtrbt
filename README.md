@@ -85,13 +85,11 @@ You can run the program on one sample
     # Run the program
     bash scripts/FindTaxaCtrbt.sh  <path_to_diamond_index> <path_to_MTG/MTS_sample> <directory_to_write_output>
 
-Inputs are provided as positional manner, thus must follow the order
+Inputs are provided as positional manner, thus must follow the order 1.
+<path_to_diamond_index> 2. <path_to_MTG/MTS_sample> currently accept
+.fastq.gz file 3. <directory_to_write_output>
 
-    1. <path_to_diamond_index>
-    2. <path_to_MTG/MTS_sample> currently accept .fastq.gz file
-    3. <directory_to_write_output> 
-
-Output: 1. diamond output *xx.m8* 2. diamong log file *xx.log*
+Output 1. diamond output *xx.m8* 2. diamong log file *xx.log*
 
 or, run the program on all samples in one directory
 `<directory_of_input_sample>` using paralllel
