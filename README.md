@@ -67,7 +67,7 @@ Tutorial
 
     conda activate FindTaxaCtrbt 
 
-**Build diamond index for protein reference **
+**Build diamond index for protein reference**
 
 For each protein fasta file, you only need to build index for once upon
 first usage.
