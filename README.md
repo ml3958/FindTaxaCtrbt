@@ -21,6 +21,8 @@ TOC
 Installation
 ------------
 
+    git clone https://github.com/ml3958/FindTaxaCtrbt
+
 Getting started
 ---------------
 
