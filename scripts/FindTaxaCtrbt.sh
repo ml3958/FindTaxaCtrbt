@@ -2,13 +2,12 @@
 
 
 # USAGE: 
-# FindTaxaCtrbt.sh  [reference] [input] [outputDir] [intermediateDir] 
+# FindTaxaCtrbt.sh  [reference] [input] [outputDir]
 
 
 db=$1
 input=$2
 outputDir=$3
-intermediateDir=$4
 input_prefix=$(basename -s .fastq.gz $input)
 
 
