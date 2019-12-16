@@ -5,7 +5,9 @@ Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu)
 
 Date: December 12, 2019
 
-This computational pipeline is designed to launch an exhaustive
+This computational pipeline for exhaustive search of taxonomic
+contribution to a specific function, within a defined microbiome
+community.
 
 TOC
 ---
