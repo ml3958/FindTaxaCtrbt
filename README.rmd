@@ -135,16 +135,17 @@ parallel \
 **4. [CORE] Parse diamond output**
 
 ```
-Rscript --vanilla ../scripts/parse_blastx.r <path_to_diamond_m8_output> <output_file> <identity_cutoff>
+Rscript --vanilla ../scripts/parse_blastx.R <path_to_diamond_m8_output> <output_file> <identity_cutoff>
 ```
 
 or parallel 
 
 ```
+dir=<.m8_file_directory>
 parallel \
-   Rscript --vanilla ../scripts/parse_blastx.r {.} {.}_protein_summary.txt <identity_cutoff> \
+   Rscript --vanilla ../scripts/parse_blastx.R {1} {1}_protein_summary.txt <identity_cutoff> \
    ::: \
-      `ls <.m8_file_directory>|grep m8$`
+      `ls ${dir}/* |grep m8$`
 ```
 
 **5. Merge batch output into one sample**
