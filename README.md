@@ -79,8 +79,8 @@ For each protein fasta file, you only need to build index for once upon
 first usage.
 
     diamond makedb \
-       --in frc_oxc_oxdd_uniref100.faa \ # frc_oxc_oxdd_uniref100.faa as input
-       --db frc_oxc_oxdd_uniref100.faa  
+       --in <ref_protein_homolog.fa> \ # path to input fasta file for reference protein homologs
+       --db <path_of_database_to_write_to>  # output directory of database
 
 **3. \[CORE\] Run diamond**
 
