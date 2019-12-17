@@ -166,21 +166,22 @@ Download sample data via this [link](https://drive.google.com/drive/u/1/folders/
 Within the downloaded folder, there is a **frc_oxc_oxdd_uniref100.faa** that contains the amino acid sequences of 6067 protein homologs of oxalate degrading enzymes OXDD, FRC and OXC. 
 
 Also, there are two folders **MTG/** and **MTS/** that contains 3 metagenomic and 3 metatranscriptomic fastq.gz samples, respectively.
-<!-- For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function. -->
-<!-- Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC at Uniprot. -->
 
-<!-- ```{r example table, echo=FALSE,eval=TRUE} -->
-<!-- table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv' -->
+For example, I am interested in the oxalyl-coA decarboxylase (OXC), which is involved in the oxalate degradation function.
+Therefore, I found a [homologous protein family](http://www.ebi.ac.uk/interpro/entry/InterPro/IPR017660/) for OXC at Uniprot.
 
-<!-- read.csv(table_dir) %>% -->
-<!--   head() %>% -->
-<!--   dplyr::mutate(UniprotID = name, -->
-<!--                 Strain = Species) %>% -->
-<!--   tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>% -->
-<!--   dplyr::select(UniprotID,Description,Phylum, Family, Genus, Species, Strain) %>% -->
-<!--   knitr::kable(format = "markdown") %>% -->
-<!--   kable_styling(font_size = 7, full_width = F)  -->
-<!-- ``` -->
+```{r example table, echo=FALSE,eval=TRUE}
+table_dir='/Volumes/Research/blaserlab/blaserlabspace/Members/Menghan_Liu/ODE/human_metagenomics/0_data/ODE_tnaA_info.csv'
+
+read.csv(table_dir) %>%
+  head() %>%
+  dplyr::mutate(UniprotID = name,
+                Strain = Species) %>%
+  tidyr::separate(Species, into = c("Genus","Species"),sep=" ",extra="drop") %>%
+  dplyr::select(UniprotID,Description,Phylum, Family, Genus, Species, Strain) %>%
+  knitr::kable(format = "markdown") %>%
+  kable_styling(font_size = 7, full_width = F)
+```
 
 Now, let's start a test run on those sample data
 
