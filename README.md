@@ -25,6 +25,12 @@ Installation
 
     git clone https://github.com/ml3958/FindTaxaCtrbt
 
+This command will download all relevent scripts to your local computer.
+
+In order to use these scripts, you either need to be inside this
+downloaded folder via `cd <Downloaded_FindTaxaCtrbt_folder>`, or add the
+full path when calling the script.
+
 Getting started
 ---------------
 
