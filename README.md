@@ -1,7 +1,9 @@
 FindTaxaCtrbt
 =============
 
-Author: Menghan Liu @ [twitter](https://twitter.com/menghan_liu)
+Author: Menghan Liu  
+@ [twitter](https://twitter.com/menghan_liu) @
+[email](menghan.liu@nyumc.org)
 
 Date: December 12, 2019
 
@@ -9,8 +11,8 @@ This computational pipeline for exhaustive search of taxonomic
 contribution to a specific function, within a defined microbiome
 community.
 
-*Status: The core shell scripts are up, R scripts are being cleaned up
-and pending for uploading.*
+*Status: Source code of the pipeline can be found on this repository.
+Downstream analyses scripts are available per request.*
 
 TOC
 ---
