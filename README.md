@@ -9,6 +9,9 @@ This computational pipeline for exhaustive search of taxonomic
 contribution to a specific function, within a defined microbiome
 community.
 
+*Status: The core shell scripts are up, R scripts are being cleaned up
+and pending for uploading.*
+
 TOC
 ---
 

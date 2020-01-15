@@ -13,7 +13,7 @@ code_folding: hide
 
 ```{r setup, echo = FALSE, eval=TRUE}
 knitr::opts_knit$set()
-dir='/Users/menghanliu/Documents/FindTaxaCtrbt'
+dir='/Users/MenghanLiu/Documents/GitHub/FindTaxaCtrbt'
 knitr::opts_knit$set(root.dir = dir)
 knitr::opts_chunk$set(message = FALSE,warning = FALSE)
 ```
@@ -31,6 +31,7 @@ Date: December 12, 2019
 
 This computational pipeline for exhaustive search of taxonomic contribution to a specific function, within a defined microbiome community.
 
+*Status: The core shell scripts are up, R scripts are being cleaned up and pending for uploading.*
 
 
 ## TOC 
