@@ -188,13 +188,13 @@ read.csv(table_dir) %>%
   kable_styling(font_size = 7, full_width = F)
 ```
 
-The multi-omics data I used for the study come from the following studies
-```{r}
-table_dir = "~/OneDrive - NYU Langone Health/oxalobiome/NatureMicro/Suppl table.xlsx"
-read_excel(table_dir,sheet = 1,skip = 2) %>%
-   knitr::kable(format = "markdown") %>%
-  kable_styling(font_size = 7, full_width = F)
-```
+<!-- The multi-omics data I used for the study come from the following studies -->
+<!-- ```{r} -->
+<!-- table_dir = "~/OneDrive - NYU Langone Health/oxalobiome/NatureMicro/Suppl table.xlsx" -->
+<!-- read_excel(table_dir,sheet = 1,skip = 2) %>% -->
+<!--    knitr::kable(format = "markdown") %>% -->
+<!--   kable_styling(font_size = 7, full_width = F) -->
+<!-- ``` -->
 
 Now, let's start a test run on those sample data
 
@@ -244,7 +244,9 @@ parallel \
 
 ## Citation 
 
-Pending
+Microbial contributions to oxalate metabolism in health and disease
+Menghan Liu, Joseph C. Devlin, Jiyuan Hu, Angelina Volkova, Thomas W Battaglia, Allyson Byrd, Png Loke, Huilin Li, Kelly V Ruggles, Aristotelis Tsirigos, Martin J Blaser, Lama Nazzal
+*medRxiv* 2020.01.27.20018770; doi: https://doi.org/10.1101/2020.01.27.20018770
 
 
 
